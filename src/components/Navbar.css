@@ -1,0 +1,40 @@
+.navigation-bar__container {
+  padding-top: 192px;
+}
+
+.navigation-bar {
+  height: 75px;
+  width: auto;
+  padding: 0 97px;
+  background-color: #292828;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Lexend", sans-serif;
+}
+
+.navigation-bar__logo {
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.navigation-bar__nav-links {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  list-style-type: none;
+  font-size: 24px;
+}
+
+.navigation-bar__nav-links--left {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.navigation-bar__nav-links--right {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+}
