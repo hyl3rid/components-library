@@ -27,6 +27,11 @@
   font-size: 24px;
 }
 
+.navigation-bar__nav-links a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .navigation-bar__nav-links--left {
   display: flex;
   justify-content: flex-start;
@@ -37,4 +42,33 @@
   display: flex;
   justify-content: flex-end;
   padding: 0;
+}
+
+.navigation-bar__login {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.navigation-bar__dropdown-menu {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  background-color: #292828;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 75px;
+  padding: 0;
+}
+
+.navigation-bar__submenu {
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 24px;
+  font-family: "Lexend", sans-serif;
 }
