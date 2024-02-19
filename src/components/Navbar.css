@@ -61,14 +61,24 @@
 
 .dropdown {
   position: absolute;
-  top: 75px;
+  top: 50px;
   padding: 0;
 }
 
 .navigation-bar__submenu {
   border: none;
+  padding: 0;
+  padding-right: 5px;
   background: transparent;
   color: #fff;
   font-size: 24px;
   font-family: "Lexend", sans-serif;
+}
+
+.navigation-bar__link-item,
+.navigation-bar__link-item a,
+.navigation-bar__down-chevron {
+  display: flex;
+  align-items: center;
+  position: relative;
 }
