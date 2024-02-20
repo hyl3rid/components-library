@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from "react";
+import { Link } from 'react-router-dom';
 import Dropdown from './Dropdown';
+
 
 const MenuItems = ({ items }) => {
     const [dropdown, setDropdown] = useState(false);
@@ -22,22 +24,22 @@ const MenuItems = ({ items }) => {
        }, [dropdown]);
 
     return (
-        <li class="navigation-bar__link-item" onClick={() => setDropdown((prev) => !prev)}  ref={ref}>
+        <li className="navigation-bar__link-item" onClick={() => setDropdown((prev) => !prev)}  ref={ref}>
             {items.submenu ? (
                 <>
                     <button 
-                    class="navigation-bar__submenu"
+                    className="navigation-bar__submenu"
                     aria-expanded={dropdown ? "true" : "false"}
                     >
                         {items.title}
                     </button>
                 
-                    {items.downChevron && <div class="navigation-bar__down-chevron">{items.downChevron}</div>}
+                    {items.downChevron && <div className="navigation-bar__down-chevron">{items.downChevron}</div>}
                     <Dropdown submenus={items.submenu} dropdown={dropdown}/>
                 </>
             ) : (
                 <>
-                    <a href="{items.url}">{items.title}</a>
+                    <Link to={items.url}>{items.title}</Link>
                 </>
             )}
         </li>

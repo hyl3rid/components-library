@@ -4,9 +4,6 @@ function Header() {
   return (
       <header>
         <Navbar/>
-        <section class="navigation-bar__container">
-          <Navbar position="center"/>
-        </section>
       </header>
   );
 }

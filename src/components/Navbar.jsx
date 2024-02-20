@@ -1,13 +1,17 @@
 import './Navbar.css';
 import { menuItemsData } from '../menuItemsData.js';
 import MenuItems from './MenuItems';
+import { Link } from 'react-router-dom';
+
 
 function Navbar({position = "default"}) {
   if (position === "default") {
     return (
-      <nav class="navigation-bar">
-        <h1 class="navigation-bar__logo">LOGO</h1>
-        <ul class="navigation-bar__nav-links">
+      <nav className="navigation-bar">
+        <Link to="/" className="navigation-bar__logo">
+          <span>LOGO</span>
+        </Link>
+        <ul className="navigation-bar__nav-links">
         
         {menuItemsData.map((menu, index) => {
           return <MenuItems items={menu} key={index} />;
@@ -18,23 +22,25 @@ function Navbar({position = "default"}) {
     );
   } else {
     return (
-      <nav class="navigation-bar navigation-bar--center">
-          <ul class="navigation-bar__nav-links navigation-bar__nav-links--left">
+      <nav className="navigation-bar navigation-bar--center">
+          <ul className="navigation-bar__nav-links navigation-bar__nav-links--left">
             {menuItemsData.map((menu, index) => {
               if (index < 3) {
                 return <MenuItems items={menu} key={index} />;
               } else {
-                return <></>
+                return ""
               }
             })}
           </ul>
-          <h1 class="navigation-bar__logo">LOGO</h1>
-          <ul class="navigation-bar__nav-links navigation-bar__nav-links--right">
+          <Link to="/" className="navigation-bar__logo">
+            <span>LOGO</span>
+          </Link>
+          <ul className="navigation-bar__nav-links navigation-bar__nav-links--right">
             {menuItemsData.map((menu, index) => {
               if (index >= 3) {
                 return <MenuItems items={menu} key={index} />;
               } else {
-                return <></>
+                return ""
               }
             })}
           </ul>

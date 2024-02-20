@@ -22,7 +22,7 @@ export const menuItemsData = [
         },
         {
             title: 'Hero Component',
-            url: 'Hero-components',
+            url: 'hero-components',
         },
         {
             title: 'Split Components',
