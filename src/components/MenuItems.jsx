@@ -26,7 +26,6 @@ const MenuItems = ({ items }) => {
             {items.submenu ? (
                 <>
                     <button 
-                    role="button" 
                     class="navigation-bar__submenu"
                     aria-expanded={dropdown ? "true" : "false"}
                     >

@@ -23,6 +23,8 @@ function Navbar({position = "default"}) {
             {menuItemsData.map((menu, index) => {
               if (index < 3) {
                 return <MenuItems items={menu} key={index} />;
+              } else {
+                return <></>
               }
             })}
           </ul>
@@ -31,6 +33,8 @@ function Navbar({position = "default"}) {
             {menuItemsData.map((menu, index) => {
               if (index >= 3) {
                 return <MenuItems items={menu} key={index} />;
+              } else {
+                return <></>
               }
             })}
           </ul>
