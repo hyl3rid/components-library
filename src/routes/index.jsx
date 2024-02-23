@@ -9,6 +9,7 @@ import Forms from './Forms';
 import Modals from './Modals';
 import ContactUs from './ContactUs';
 import Login from './Login';
+import Secret from './Secret';
 
 export { 
     About,
@@ -22,4 +23,5 @@ export {
     Modals,
     ContactUs,
     Login,
+    Secret
 }

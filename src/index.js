@@ -15,12 +15,15 @@ import {
   Forms, 
   Modals, 
   ContactUs, 
-  Login 
+  Login,
+  Secret 
 } from './routes';
+import ProtectedRoute from './components/ProtectedRoute';
+import { AuthProvider } from "./hooks/useAuth";
 
 const router = createBrowserRouter([
   {
-    element: <Root />,
+    element: <AuthProvider><Root /></AuthProvider>,
     errorElement: <ErrorPage />,
     children: [
       {
@@ -62,6 +65,10 @@ const router = createBrowserRouter([
       {
         path: "login",
         element: <Login />
+      },
+      {
+        path: "secret",
+        element: <ProtectedRoute><Secret /></ProtectedRoute>,
       }
     ]
   }
