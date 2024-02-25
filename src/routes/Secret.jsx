@@ -1,5 +1,3 @@
-import { useAuth } from "../hooks/useAuth";
-
 const Secret = () => {
     // const { logout } = useAuth();
 
